@@ -9,4 +9,16 @@ let randomPieceOfAdvice = messages.pieceOfAdvice[Math.floor(Math.random() * mess
 const wordOfTheDay = () => `Today your celestial guidance body is ${randomCelestialBody}, that means you might feel a little ${randomCurrentState}. 
 My advice? ${randomPieceOfAdvice}!`
 
-console.log(wordOfTheDay());
+const date = new Date();
+console.log(date.getUTCDate());
+
+console.log(date.getDay());
+
+if ((date.getUTCDate() === 13) && (date.getDay()===5)) {
+    console.log("Today is Friday 13th, it's a bad-luck day. Please listen to me, be extra-careful and avoid leaving the house. It would be better not even get out of bed!")
+} else {
+    console.log(wordOfTheDay());
+}
+
+
+
